@@ -1,0 +1,363 @@
+* { 
+  margin: 0;
+  padding: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+  position: fixed;
+  border-bottom: 1px solid rgb(0, 17, 255);
+  background: rgb(255, 255, 255);
+  padding: 0 0 20px 0;
+  z-index: 2;
+}
+
+h2, h3 {
+  font-weight: 300;
+}
+
+.wrapperModal h3 {
+  font-weight: 300;
+}
+
+.countInput, .commentInput {
+  padding: 5px;
+  border: 1px solid rgb(158, 158, 158);
+  outline: none;
+  font-size: 16px;
+  width: 65%;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.commentInput {
+  display: block;
+}
+
+.countInput:focus, .commentInput:focus {
+  border: 1px solid rgb(56, 56, 56);
+}
+
+.colors {
+  margin-top: 10px;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  background: black;
+  height: 100%;
+  z-index: 99;
+  opacity: 0.6;
+}
+
+.wrapperModal {
+  display: none;
+}
+
+.nameEl, p {
+  font-weight: 300;
+}
+
+.nameEl {
+  line-height: 30px;
+}
+
+.wrapperDate {
+  height: 60px;
+}
+
+.categories {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.categories div {
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  margin: 20px;
+}
+
+.categories img {
+  width: 100%;
+  height: 100%;
+} 
+
+main {
+  padding-top: 210px;
+}
+
+.buttonUp {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  margin: 0 20px 20px 0;
+  bottom: 0;
+  right: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  width: 14vw;
+  margin-left: 3vw;
+  margin-top: 35px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(46, 60, 255, 0.35);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.name {
+  position: absolute;
+  z-index: 1;
+}
+
+.imageCard {
+  min-width: 150px;
+  min-height: 150px;
+  width: 12vw;
+  height: 12vw;
+  border-radius: 3px;
+}
+
+.modal {
+  width: 300px;
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.closeModal {
+  border: none;
+  background: none;
+  font-size: 20px;
+  float: right;
+}
+
+.buttonBuy, .buttonBuyModal {
+  border: none;
+  outline: none;
+  background: rgb(0, 17, 255);
+  color:rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 200ms ease;
+}
+
+.buttonBuyModal {
+  margin-top: 10px;
+}
+
+.buttonBuy:hover, .buttonBuyModal:hover {
+  background: rgb(0, 13, 201);
+  color:rgb(222, 222, 222);
+  transition: all 300ms ease;
+  box-shadow: 0px 0px 9px 0px rgba(0, 30, 255, 0.6);
+}
+
+.buttonBuy:focus, .buttonBuyModal:focus {
+  box-shadow: none;
+}
+
+input[type="radio"]#red{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: red;
+}
+input[type="radio"]:checked#red{
+  border-color: rgb(206, 206, 206);
+  background-color: #ff0000;
+}
+
+input[type="radio"]#blue{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: rgb(0, 140, 255);
+}
+input[type="radio"]:checked#blue{
+  border-color: rgb(206, 206, 206);
+  background-color: rgb(0, 140, 255);
+}
+
+input[type="radio"]#green{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: rgb(0, 149, 2);
+}
+input[type="radio"]:checked#green{
+  border-color: rgb(206, 206, 206);
+  background-color: rgb(0, 149, 2);
+}
+
+input[type="radio"]#white{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+input[type="radio"]:checked#white{
+  border-color: rgb(206, 206, 206);
+  background-color: rgb(255, 255, 255);
+}
+
+input[type="radio"]#yellow{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: rgb(255, 247, 0);
+}
+input[type="radio"]:checked#yellow{
+  border-color: rgb(206, 206, 206);
+  background-color: rgb(255, 247, 0);
+}
+
+input[type="radio"]#pink{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: rgb(241, 91, 255);
+}
+input[type="radio"]:checked#pink{
+  border-color: rgb(206, 206, 206);
+  background-color: rgb(241, 91, 255);
+}
+
+input[type="radio"]#orange{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(83, 83, 83);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: rgb(255, 140, 0);
+}
+input[type="radio"]:checked#orange{
+  border-color: rgb(206, 206, 206);
+  background-color: rgb(255, 140, 0);
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul {
+  margin: 5px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.mode {
+  position: absolute;
+  background: none;
+  right: 0;
+  margin-right: 40px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: 20px;
+  background: black;
+  width: 70px;
+  height: 70px;
+}
+
+.mode:hover {
+  box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease;
+}
+
+.mode:focus {
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease;
+}
+.darkMode {
+  color: white
+}
+
+@media screen and (max-width: 720px){
+  main {
+    padding-top: 0;
+  }
+  header {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 410px){
+  main {
+    padding-top: 0;
+  }
+}

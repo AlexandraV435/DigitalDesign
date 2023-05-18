@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapperModal" id="wrapperModal"> 
+    <div class="background"></div>
+    <div class="modal" id="modal">
+      <form action="" id="form">
+        <button id="closeModal" type="button" class="closeModal">X</button>
+        <div>
+          <h3>Введите количество товара:</h3>
+          <input type="number" id="countInput" class="countInput" value="1" min="1">
+        </div>
+        <div id="colors" class="colors"></div>
+        <input type="text" placeholder="Можете добавить комментарий" maxlength="2000" id="commentInput" class="commentInput">
+        <button class="buttonBuyModal" id="buttonBuyModal" type="button">Купить</button>
+      </form>
+    </div>
+  </div>
+  <header>
+    <button class="mode" id="mode">
+      <img src="./styles/images/icons/dayNight.png" alt="dayNightMode">
+    </button>
+    <div  class="categories">
+      <div class="shoes" id="shoes">
+        <img src="./styles/images/icons/shoes.png" alt="shoes">
+        <h3>Туфли</h3>
+      </div>
+      <div class="dresses" id="dresses">
+        <img src="./styles/images/icons/dresses.png" alt="dresses">
+        <h3>Платья</h3>
+      </div>
+      <div class="shorts" id="shorts">
+        <img src="./styles/images/icons/shorts.png" alt="shorts">
+        <h3>Шорты</h3>
+      </div>
+      <div class="jackets" id="jackets">
+        <img src="./styles/images/icons/jackets.png" alt="jackets">
+        <h3>Куртки</h3>
+      </div>
+    </div>
+  </header>
+  <main>
+    <button class="button buttonUp" id="buttonUp">
+      <img src="./styles/images/icons/iconUpDark.png" alt="iconUp">
+    </button>
+    <div class="wrapper" id="wrapper">
+    </div>
+  </main>
+  <footer class="footer">
+    <ul id="uShoes">Туфли</ul>
+    <ul id="uDresses">Платья</ul>
+    <ul id="uShorts">Шорты</ul>
+    <ul id="uJackets">Куртки</ul>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
